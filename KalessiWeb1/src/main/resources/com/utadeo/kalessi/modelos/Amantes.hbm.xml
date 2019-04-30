@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-abr-2019 22:04:27 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="bd_kalessi" name="com.utadeo.kalessi.modelos.Amantes" optimistic-lock="version" table="amantes">
+    <id name="idamantes" type="int">
+      <column name="idamantes"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="grupo" type="string">
+      <column length="45" name="grupo"/>
+    </property>
+    <property name="ejecutado" type="java.lang.Byte">
+      <column name="ejecutado"/>
+    </property>
+    <property name="deRealezaDigno" type="java.lang.Byte">
+      <column name="de_realeza_digno"/>
+    </property>
+    <property name="deRealezaNoDigno" type="java.lang.Byte">
+      <column name="de_realeza_no_digno"/>
+    </property>
+  </class>
+</hibernate-mapping>

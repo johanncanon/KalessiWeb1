@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29-abr-2019 22:04:27 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="bd_kalessi" name="com.utadeo.kalessi.modelos.HijosSubditos" optimistic-lock="version" table="hijos_subditos">
+    <composite-id class="com.utadeo.kalessi.modelos.HijosSubditosId" name="id">
+      <key-property name="idhijosSubditos" type="int">
+        <column name="idhijos_subditos"/>
+      </key-property>
+      <key-property name="subditosIdsubditos" type="int">
+        <column name="subditos_idsubditos"/>
+      </key-property>
+      <key-property name="subditosTerritoriosIdterritorios" type="int">
+        <column name="subditos_territorios_idterritorios"/>
+      </key-property>
+    </composite-id>
+    <many-to-one class="com.utadeo.kalessi.modelos.Subditos" fetch="select" insert="false" name="subditos" update="false">
+      <column name="subditos_idsubditos" not-null="true"/>
+      <column name="subditos_territorios_idterritorios" not-null="true"/>
+    </many-to-one>
+    <property name="nombreHijo" type="string">
+      <column length="45" name="nombre_hijo"/>
+    </property>
+  </class>
+</hibernate-mapping>
